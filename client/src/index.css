@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  font-family: 'Product Sans',Arial,sans-serif;
+}
+
+li {
+  list-style: none;
+}
