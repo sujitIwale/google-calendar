@@ -30,6 +30,18 @@ const MonthState = (props) => {
 			'Friday',
 			'Saturday',
 		],
+		events: {
+			2022: {
+				0: {
+					11: [{ title: 'New Task' }, { title: 'New Task' }],
+					18: [{ title: 'New Task' }],
+					12: [{ title: 'New Task' }],
+				},
+				11: {
+					31: [{ title: 'new year' }],
+				},
+			},
+		},
 	};
 
 	const [state, dispatch] = useReducer(MonthReducer, initialState);
@@ -44,6 +56,7 @@ const MonthState = (props) => {
 				date: state.date,
 				months: state.months,
 				weekDays: state.weekDays,
+				events: state.events,
 				updateDate,
 			}}>
 			{props.children}

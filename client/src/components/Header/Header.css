@@ -29,6 +29,7 @@
 .header-profile {
     height: 40px;
     width: 40px;
+    margin-right: 4px;
 }
 
 .header-profile img {
@@ -40,15 +41,19 @@
 
 .header-month {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
+    flex-direction: start;
+    width: 60%;
 }
 
-.header-month > h2,i {
+.header-month-change {
     margin: 0 10px;
+    display: flex;
+    flex-direction: row;
 }
 
-.header-month > i {
+.header-month-change > i {
     /* padding: 8px; */
     font-size: x-large;
     border-radius: 50%;
@@ -59,6 +64,13 @@
     justify-content: center;
 }
 
-.header-month > i:hover {
+.header-month-change > i:hover {
     background-color: rgb(207, 207, 207);
+}
+
+.header-month-year {
+    position: absolute;
+    user-select: none;
+    white-space: nowrap;
+    font-size: large;
 }

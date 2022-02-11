@@ -18,3 +18,8 @@
     text-align: center;
     padding-top: 10px;
 }
+
+.events {
+    display: flex;
+    flex-direction: column;
+}

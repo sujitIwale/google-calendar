@@ -20,20 +20,22 @@ const Header = () => {
 					/>
 					<h1>Calendar</h1>
 				</li>
-				<li className='header-month'>
+				<li className='header-month-change'>
 					<i
 						className='fa-solid fa-angle-left pointer'
 						onClick={() =>
 							updateDate(date.setMonth(date.getMonth() - 1))
 						}></i>
-					<h2>
-						{months[month] + ' '} {year + ' '}
-					</h2>
 					<i
 						className='fa-solid fa-angle-right pointer'
 						onClick={() =>
 							updateDate(date.setMonth(date.getMonth() + 1))
 						}></i>
+				</li>
+				<li className='header-month'>
+					<span className='header-month-year'>
+						{months[month] + '  '} {year + ' '}
+					</span>
 				</li>
 				<li className='header-profile'>
 					<img
