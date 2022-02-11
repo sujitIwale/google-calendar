@@ -4,6 +4,7 @@
 
 .App {
     height: 100vh;
+    overflow: hidden;
 }
 .right-section {
     width: 70%;

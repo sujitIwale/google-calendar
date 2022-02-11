@@ -1,17 +1,14 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
+import { useMonth } from '../../hooks/useMonth';
+import EventForm from '../EventForm/EventForm';
+import Modal from '../Shared/Modal/Modal';
 import './Month.css';
 
 const Month = () => {
-	const weeekDayas = [
-		'Sunday',
-		'Monday',
-		'Tuesday',
-		'Wednesday',
-		'Thursday',
-		'Friday',
-		'Saturday',
-	];
-	const todaysDate = new Date();
+	const { date: todaysDate, weekDays } = useMonth();
+	const [ModalOpen, setModalOpen] = useState(false);
+
+	// const todaysDate = new Date(2001, 11);
 	const [month, day, year] = [
 		todaysDate.getMonth(),
 		todaysDate.getDate(),
@@ -20,7 +17,9 @@ const Month = () => {
 	const daysInMonth = new Date(year, month + 1, 0).getDate();
 	const startOfMonthDay = new Date(year, month, 1).getDay() + 1;
 	console.log(startOfMonthDay, daysInMonth);
-
+	const openModal = () => {
+		setModalOpen(!ModalOpen);
+	};
 	const getWeeksUi = () => {
 		let started = false;
 		let currentDay = 0;
@@ -37,7 +36,11 @@ const Month = () => {
 		const weeksJsx = (
 			<Fragment>
 				{days.map((day) => (
-					<span className='day-name'>{day}</span>
+					<span
+						className='day-name'
+						onClick={day === '' ? null : openModal}>
+						{day}
+					</span>
 				))}
 			</Fragment>
 		);
@@ -45,8 +48,14 @@ const Month = () => {
 	};
 	return (
 		<div className='month-calendar-container'>
+			{ModalOpen && (
+				<Modal
+					closeModal={() => setModalOpen((state) => !state)}
+					children={<EventForm />}
+				/>
+			)}
 			<div className='month-calendar'>
-				{weeekDayas.map((weekday) => (
+				{weekDays.map((weekday) => (
 					<span className='day-name'>{weekday}</span>
 				))}
 				{getWeeksUi()}

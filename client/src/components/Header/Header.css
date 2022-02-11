@@ -37,3 +37,28 @@
     border-radius: 50%;
     border: 1px solid rgb(114, 114, 114);
 }
+
+.header-month {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-month > h2,i {
+    margin: 0 10px;
+}
+
+.header-month > i {
+    /* padding: 8px; */
+    font-size: x-large;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-month > i:hover {
+    background-color: rgb(207, 207, 207);
+}

@@ -1,15 +1,18 @@
 import './App.css';
 import Calendar from './components/Calendar/Calendar';
 import Header from './components/Header/Header';
+import MonthState from './context/MonthCalendar/MonthState';
 
 function App() {
 	return (
-		<div className='App'>
-			<Header />
-			<section className='right-section'>
-				<Calendar />
-			</section>
-		</div>
+		<MonthState>
+			<div className='App'>
+				<Header />
+				<section className='right-section'>
+					<Calendar />
+				</section>
+			</div>
+		</MonthState>
 	);
 }
 

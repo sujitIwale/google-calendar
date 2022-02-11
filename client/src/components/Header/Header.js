@@ -1,22 +1,10 @@
 import React from 'react';
+import { useMonth } from '../../hooks/useMonth';
 import './Header.css';
 
 const Header = () => {
-	const months = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December',
-	];
-	const date = new Date();
+	const { date, updateDate, months } = useMonth();
+
 	const [month, day, year] = [
 		date.getMonth(),
 		date.getDate(),
@@ -32,11 +20,20 @@ const Header = () => {
 					/>
 					<h1>Calendar</h1>
 				</li>
-				<li className='header-selection'>
+				<li className='header-month'>
+					<i
+						className='fa-solid fa-angle-left pointer'
+						onClick={() =>
+							updateDate(date.setMonth(date.getMonth() - 1))
+						}></i>
 					<h2>
-						{day + ' '}
 						{months[month] + ' '} {year + ' '}
 					</h2>
+					<i
+						className='fa-solid fa-angle-right pointer'
+						onClick={() =>
+							updateDate(date.setMonth(date.getMonth() + 1))
+						}></i>
 				</li>
 				<li className='header-profile'>
 					<img
