@@ -2,6 +2,26 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => {
+	const months = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December',
+	];
+	const date = new Date();
+	const [month, day, year] = [
+		date.getMonth(),
+		date.getDate(),
+		date.getFullYear(),
+	];
 	return (
 		<div className='header-main'>
 			<ul className='header-items '>
@@ -10,7 +30,13 @@ const Header = () => {
 						alt='logo'
 						src='https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_10_2x.png'
 					/>
-					<h1>Calender</h1>
+					<h1>Calendar</h1>
+				</li>
+				<li className='header-selection'>
+					<h2>
+						{day + ' '}
+						{months[month] + ' '} {year + ' '}
+					</h2>
 				</li>
 				<li className='header-profile'>
 					<img
