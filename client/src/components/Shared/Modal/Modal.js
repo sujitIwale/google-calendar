@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Button from '../Button/Button';
 import './Modal.css';
 
-const ModalOverlay = ({ closeModal, children }) => {
+const ModalOverlay = ({ closeModal, children, modalTitle }) => {
 	const content = (
 		<div
 			className='modalBackground'
@@ -22,6 +22,7 @@ const ModalOverlay = ({ closeModal, children }) => {
 						}}>
 						<i className='fas fa-times white'></i>
 					</button>
+					<div className='modal-title'>{modalTitle}</div>
 				</div>
 				{children}
 				<div className='footer'>

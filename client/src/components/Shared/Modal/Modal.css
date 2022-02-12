@@ -11,13 +11,12 @@
 
 .modalContainer {
 	width: 600px;
-	margin: 20px;
+	margin: 10px;
 	border-radius: 5px;
 	background-color: #f0f0f1;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	display: flex;
 	flex-direction: column;
-	padding: 18px;
     margin-bottom: 14%;
 }
 
@@ -25,11 +24,22 @@
 	display: inline-block;
 	text-align: center;
 	margin-top: 10px;
+	
 }
 
 .titleCloseBtn {
 	display: flex;
-	justify-content: flex-end;
+	justify-content:space-between;
+	flex-direction: row-reverse;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 5px;
+	align-items: center;
+}
+
+.modal-title {
+	/* margin-right: 190px; */
+	font-size: larger;
+	font-weight: bold;
 }
 
 .titleCloseBtn button {
@@ -43,6 +53,7 @@
 .modalContainer .footer {
 	display: flex;
 	justify-content: flex-end;
+	padding: 5px;
 }
 
 @media only screen and (max-width:400px){

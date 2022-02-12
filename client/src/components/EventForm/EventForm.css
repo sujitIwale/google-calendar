@@ -1,0 +1,13 @@
+.event-form-container {
+    padding: 12px;
+
+}
+.event-form-header {
+    text-align: center;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.event-form-container input {
+    width: 90%;
+    font-size: larger;
+    padding: 3px 7px;
+}

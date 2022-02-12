@@ -66,6 +66,7 @@ const Month = () => {
 				<Modal
 					closeModal={() => setModalOpen((state) => !state)}
 					children={<EventForm />}
+					modalTitle='Add Calendar Event'
 				/>
 			)}
 			<div className='month-calendar'>
