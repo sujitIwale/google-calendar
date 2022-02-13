@@ -10,4 +10,23 @@
     width: 90%;
     font-size: larger;
     padding: 3px 7px;
+    border: none;
+}
+
+.event-form-container > * {
+    margin: 6px;
+}
+
+.event-form-container textarea {
+    width: 90.5%;
+    border: none;
+    font-size: larger;
+    padding: 3px 7px;
+    height: 60px;
+}
+
+.event-form-container .input-labels {
+    color: rgb(0, 162, 255);
+    font-size: medium;
+    opacity: 60%;
 }
