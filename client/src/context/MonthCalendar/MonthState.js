@@ -1,10 +1,19 @@
 import { createContext, useReducer } from 'react';
+import { getItem, setItem } from '../../helpers/localStorage';
 import { ADD_EVENT, UPDATE_DATE } from '../types';
 import MonthReducer from './MonthReducer';
 
 export const MonthContext = createContext();
 
 const MonthState = (props) => {
+	const getEvents = () => {
+		if (!getItem('events')) {
+			setItem('events', {});
+			return {};
+		}
+
+		return getItem('events');
+	};
 	const initialState = {
 		date: new Date(),
 		months: [
@@ -30,18 +39,7 @@ const MonthState = (props) => {
 			'Friday',
 			'Saturday',
 		],
-		events: {
-			2022: {
-				0: {
-					11: [{ title: 'New Task' }, { title: 'New Task' }],
-					18: [{ title: 'New Task' }],
-					12: [{ title: 'New Task' }],
-				},
-				11: {
-					31: [{ title: 'new year' }],
-				},
-			},
-		},
+		events: getEvents(),
 	};
 
 	const [state, dispatch] = useReducer(MonthReducer, initialState);

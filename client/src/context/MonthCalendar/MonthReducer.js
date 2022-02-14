@@ -1,3 +1,4 @@
+import { setItem } from '../../helpers/localStorage';
 import { ADD_EVENT, UPDATE_DATE } from '../types';
 
 const MonthReducer = (state, action) => {
@@ -8,6 +9,7 @@ const MonthReducer = (state, action) => {
 				...state,
 			};
 		case ADD_EVENT:
+			setItem('events', action.payload);
 			return {
 				...state,
 				events: action.payload,

@@ -21,7 +21,9 @@ const Month = () => {
 	const openModal = () => {
 		setModalOpen(!ModalOpen);
 	};
-
+	const eventClickHandler = (e) => {
+		e.stopPropagation();
+	};
 	const getWeeksUi = () => {
 		let started = false;
 		let currentDay = 0;
@@ -55,11 +57,14 @@ const Month = () => {
 									events[year][month] &&
 									events[year][month][d] &&
 									events[year][month][d].map((e, i) => (
-										<p
+										<span
+											onClick={(e) => {
+												eventClickHandler(e);
+											}}
 											key={i}
 											className='month-calendar-event'>
 											{e.title}
-										</p>
+										</span>
 									))}
 							</label>
 						</span>

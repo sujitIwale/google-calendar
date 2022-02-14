@@ -19,7 +19,22 @@
     padding-top: 10px;
 }
 
-.events {
+.month-calendar-events {
     display: flex;
     flex-direction: column;
+}
+
+.month-calendar-event {
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    color: white;
+    background-color: rgb(88, 88, 155);
+    margin: 5px 1px;
+    border-radius: 3px;
+}
+
+.month-calendar-event:hover {
+    color: white;
+    background-color: rgb(115, 115, 184);
 }
