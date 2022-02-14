@@ -26,12 +26,12 @@
 
 .month-calendar-event {
     cursor: pointer;
-    overflow: hidden;
     text-overflow:ellipsis;
     color: white;
     background-color: rgb(88, 88, 155);
-    margin: 5px 1px;
+    margin: 2px 1px;
     border-radius: 3px;
+    overflow: hidden;
 }
 
 .month-calendar-event:hover {
