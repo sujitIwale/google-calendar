@@ -1,5 +1,5 @@
 .event-form-container {
-    padding: 12px;
+    padding: 10px;
 
 }
 .event-form-header {
@@ -29,4 +29,10 @@
     color: rgb(0, 162, 255);
     font-size: medium;
     opacity: 60%;
+}
+
+.event-form-add-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,4 +1,4 @@
-import { UPDATE_DATE } from '../types';
+import { ADD_EVENT, UPDATE_DATE } from '../types';
 
 const MonthReducer = (state, action) => {
 	switch (action.type) {
@@ -7,7 +7,11 @@ const MonthReducer = (state, action) => {
 				date: action.payload,
 				...state,
 			};
-
+		case ADD_EVENT:
+			return {
+				...state,
+				events: action.payload,
+			};
 		default:
 			return state;
 	}

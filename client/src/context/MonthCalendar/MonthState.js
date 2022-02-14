@@ -1,5 +1,5 @@
 import { createContext, useReducer } from 'react';
-import { UPDATE_DATE } from '../types';
+import { ADD_EVENT, UPDATE_DATE } from '../types';
 import MonthReducer from './MonthReducer';
 
 export const MonthContext = createContext();
@@ -45,7 +45,21 @@ const MonthState = (props) => {
 	};
 
 	const [state, dispatch] = useReducer(MonthReducer, initialState);
-	console.log(state.date);
+	const addEvent = (event, date) => {
+		const newEvents = JSON.parse(JSON.stringify(state.events));
+		if (!newEvents[date.year]) {
+			newEvents[date.year] = {};
+		}
+		if (!newEvents[date.year][date.month]) {
+			newEvents[date.year][date.month] = {};
+		}
+		if (!newEvents[date.year][date.month][date.day]) {
+			newEvents[date.year][date.month][date.day] = [];
+		}
+
+		newEvents[date.year][date.month][date.day].push(event);
+		dispatch({ type: ADD_EVENT, payload: newEvents });
+	};
 	const updateDate = (date) => {
 		dispatch({ type: UPDATE_DATE, payload: date });
 	};
@@ -58,6 +72,7 @@ const MonthState = (props) => {
 				weekDays: state.weekDays,
 				events: state.events,
 				updateDate,
+				addEvent,
 			}}>
 			{props.children}
 		</MonthContext.Provider>
