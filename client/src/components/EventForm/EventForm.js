@@ -28,7 +28,7 @@ const EventForm = ({
 	};
 	const onSave = () => {
 		if (Event.title === '') return;
-		console.log(Event);
+		// console.log(Event);
 		if (type === 'update') {
 			updateEvent(Event, date, eventData.eventIndex);
 		} else addEvent(Event, date);

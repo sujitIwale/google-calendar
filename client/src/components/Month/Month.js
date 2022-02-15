@@ -6,7 +6,7 @@ import Events from './Events';
 import './Month.css';
 
 const Month = () => {
-	console.log('Month');
+	// console.log('Month');
 	const {
 		date: todaysDate,
 		weekDays,

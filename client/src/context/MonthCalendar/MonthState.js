@@ -44,7 +44,7 @@ const MonthState = (props) => {
 
 	const [state, dispatch] = useReducer(MonthReducer, initialState);
 	const addEvent = (event, date) => {
-		console.log(event);
+		// console.log(event);
 		const newEvents = JSON.parse(JSON.stringify(state.events));
 		if (!newEvents[date.year]) {
 			newEvents[date.year] = {};
@@ -62,7 +62,7 @@ const MonthState = (props) => {
 		dispatch({ type: ADD_EVENT, payload: newEvents });
 	};
 	const updateEvent = (event, date, eventIndex) => {
-		console.log(date, eventIndex);
+		// console.log(date, eventIndex);
 		const newEvents = JSON.parse(JSON.stringify(state.events));
 		if (
 			!newEvents[date.year] &&
@@ -76,7 +76,7 @@ const MonthState = (props) => {
 	};
 
 	const deleteEvent = (event, date, eventIndex) => {
-		console.log(date, eventIndex);
+		// console.log(date, eventIndex);
 		const newEvents = JSON.parse(JSON.stringify(state.events));
 		if (
 			!newEvents[date.year] &&
