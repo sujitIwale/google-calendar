@@ -12,7 +12,7 @@ const Header = () => {
 				<li className='header-title'>
 					<img
 						alt='logo'
-						src='https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_10_2x.png'
+						src='https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_15_2x.png'
 					/>
 					<h1>Calendar</h1>
 				</li>
