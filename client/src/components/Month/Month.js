@@ -22,7 +22,12 @@ const Month = () => {
 		event: null,
 	});
 
-	// const todaysDate = new Date(2001, 11);
+	const tDate = new Date();
+	const [tDay, tMonth, tYear] = [
+		tDate.getDate(),
+		tDate.getMonth(),
+		tDate.getFullYear(),
+	];
 	const [month, day, year] = [
 		todaysDate.getMonth(),
 		todaysDate.getDate(),
@@ -92,7 +97,18 @@ const Month = () => {
 											openModal();
 									  }
 							}>
-							{d}
+							<div className='date-container'>
+								<h5
+									className={
+										tYear === year &&
+										tMonth === month &&
+										tDay === d
+											? 'todays-date'
+											: ''
+									}>
+									{d}
+								</h5>
+							</div>
 							{events[year] &&
 								events[year][month] &&
 								events[year][month][d] &&

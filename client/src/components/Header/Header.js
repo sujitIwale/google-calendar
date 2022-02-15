@@ -5,7 +5,7 @@ import './Header.css';
 const Header = () => {
 	const { date, updateDate, months } = useMonth();
 
-	const [month, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
+	const [month, year] = [date.getMonth(), date.getFullYear()];
 	return (
 		<div className='header-main'>
 			<ul className='header-items '>

@@ -18,6 +18,20 @@
     text-align: center;
     padding-top: 10px;
 }
+.date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todays-date {
+    background-color: rgb(248, 200, 42);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .month-calendar-events {
     display: flex;
