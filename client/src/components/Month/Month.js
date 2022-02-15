@@ -41,7 +41,7 @@ const Month = () => {
 	const eventClickHandler = (e, event, eventIndex, d) => {
 		e.stopPropagation();
 		selectedDate.current = d;
-		console.log(event);
+		// console.log(event);
 		setForm({ opened: true, for: 'update', event: { event, eventIndex } });
 	};
 	const getEventForm = () => {
