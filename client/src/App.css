@@ -8,6 +8,7 @@
 }
 .left-section {
     float: left;
+    width: 21%;
 }
 .right-section {
     width: 79%;

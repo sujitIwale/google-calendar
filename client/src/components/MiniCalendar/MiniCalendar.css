@@ -1,0 +1,29 @@
+
+.minicalendar-container {
+    width: 80%;
+}
+.minicalendar {
+    display: grid;
+    grid-template-columns: repeat(7,minmax(20px,1fr));
+    grid-template-rows: 50px;
+    grid-auto-rows: 120px;
+}
+.minicalendar-header {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.minicalendar-header-year{
+    /* position: absolute; */
+    user-select: none;
+    white-space: nowrap;
+    font-size: large;
+} 
+.minicalendar-week-name {
+    font-size: small;
+    color: rgb(114, 113, 113);
+    /* font-weight: lighter; */
+}
