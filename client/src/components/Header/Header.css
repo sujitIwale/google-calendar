@@ -20,6 +20,12 @@
     justify-content: center;
 }
 
+.header-title h1{
+    font-weight: lighter;
+    color: rgb(92, 91, 91);
+    font-size: x-large;
+}
+
 .header-title img{
     height: 40px;
     width: 40px;
@@ -62,10 +68,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: rgb(94, 94, 94);
+    font-size:large;
 }
 
 .header-month-change > i:hover {
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(241, 241, 241);
 }
 
 .header-month-year {
@@ -73,4 +81,14 @@
     user-select: none;
     white-space: nowrap;
     font-size: large;
+}
+
+.calendar-type-btn {
+    border: 1px solid rgb(147, 148, 148);
+    background-color: inherit;
+    color: rgb(49, 49, 49);
+}
+
+.calendar-type-btn:hover {
+    background-color: rgb(240, 239, 239);
 }

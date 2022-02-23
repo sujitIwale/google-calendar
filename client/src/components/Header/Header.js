@@ -7,7 +7,7 @@ const Header = () => {
 
 	const [month, year] = [date.getMonth(), date.getFullYear()];
 	return (
-		<div className='header-main'>
+		<header className='header-main'>
 			<ul className='header-items '>
 				<li className='header-title'>
 					<img
@@ -33,6 +33,9 @@ const Header = () => {
 						{months[month] + '  '} {year + ' '}
 					</span>
 				</li>
+				<li>
+					<button className='btn calendar-type-btn'>Month</button>
+				</li>
 				<li className='header-profile'>
 					<img
 						alt='profile'
@@ -40,7 +43,7 @@ const Header = () => {
 					/>
 				</li>
 			</ul>
-		</div>
+		</header>
 	);
 };
 

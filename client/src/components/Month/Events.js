@@ -1,8 +1,5 @@
 import React from 'react';
 
-
-
-
 const Events = ({ events, year, month, d, onClick }) => {
 	const getEvents = (dayEvents) => {
 		let results = [];
