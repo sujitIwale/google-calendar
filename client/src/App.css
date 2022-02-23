@@ -6,6 +6,9 @@
     height: 100vh;
     overflow: hidden;
 }
+.left-section {
+    float: left;
+}
 .right-section {
     width: 79%;
     float: right;

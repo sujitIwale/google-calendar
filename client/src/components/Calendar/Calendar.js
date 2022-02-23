@@ -4,9 +4,9 @@ import './Calendar.css';
 
 const Calendar = () => {
 	return (
-		<div className='calendar-main'>
+		<section className='right-section calendar-main'>
 			<Month />
-		</div>
+		</section>
 	);
 };
 
